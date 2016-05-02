@@ -41,7 +41,7 @@
     "ratio-limit-enabled": false, 
     "rename-partial-files": true, 
     "rpc-authentication-required": true, 
-    "rpc-bind-address": "127.0.0.1", 
+    "rpc-bind-address": "0.0.0.0", 
     "rpc-enabled": true, 
     "rpc-password": "{ac39eadee5d9eee9bafcbb0251776b75945b9776wJxYnUCu", 
     "rpc-port": 9091, 
