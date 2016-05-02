@@ -10,8 +10,8 @@ RUN apt-get update && apt-get install -y transmission-daemon
 RUN systemctl stop transmission-daemon
 COPY settings.json /etc/transmission-daemon/settings.json
 
-# This is the port which transmission is configured to listen on in the settings.json file
-EXPOSE 64314
+# These are the port which transmission is configured to use in the settings.json file
+EXPOSE 9091 64314
 
 CMD /usr/bin/transmission-daemon -f --log-error
 
