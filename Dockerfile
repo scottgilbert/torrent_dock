@@ -8,9 +8,12 @@ RUN mkdir -p /var/lib/transmission-daemon/info/torrents
 ADD /torrents  /var/lib/transmission-daemon/info/torrents
 RUN apt-get update && apt-get install -y transmission-daemon
 COPY settings.json /etc/transmission-daemon/settings.json
+RUN chown -R debian-transmission:debian-transmission /var/lib/transmission-daemon
 
 # These are the port which transmission is configured to use in the settings.json file
 EXPOSE 9091 64314
+
+USER debian-transmission
 
 CMD /usr/bin/transmission-daemon -f --log-error
 
