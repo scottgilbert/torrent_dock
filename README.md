@@ -3,7 +3,7 @@
 Run transmission-daemon in a Docker container
 
 On a new host, one should be able to run this container following these steps:
- 1. Install docker and git
+ 1. Install docker and git, and ensure docker daemon is running
  1. "git clone" this repo
  1. cd torrent_dock
  1. ./build_it.sh
