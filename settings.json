@@ -63,7 +63,7 @@
     "umask": 18, 
     "upload-slots-per-torrent": 14, 
     "utp-enabled": false, 
-    "watch-dir": "", 
-    "watch-dir-enabled": false
+    "watch-dir": "/var/lib/transmission-daemon/.config/transmission-daemon/torrents", 
+    "watch-dir-enabled": true
 }
 
