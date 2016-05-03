@@ -9,6 +9,6 @@ docker run -d \
            -p 127.0.0.1:9091:9091 \
            -p 0.0.0.0:64314:64314 \
            -v ~/torrent_dock/data:/var/lib/transmission-daemon/downloads \
-           -v ~/torrent_dock/torrents:/var/lib/transmission-daemon/.config/transmission-daemon/torrents:ro \
+           -v ~/torrent_dock/torrents:/var/lib/transmission-daemon/.config/transmission-daemon/torrents \
            torrent_dock
 
