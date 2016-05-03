@@ -5,7 +5,7 @@ FROM ubuntu:latest
 MAINTAINER Scott Gilbert "scott.gilbert@bum.org"
 
 RUN mkdir -p /var/lib/transmission-daemon/.config/transmission-daemon/torrents
-ADD /torrents  /var/lib/transmission-daemon/.config/transmission-daemon/torrents
+#ADD /torrents  /var/lib/transmission-daemon/.config/transmission-daemon/torrents
 RUN apt-get update && apt-get install -y transmission-daemon
 COPY settings.json /etc/transmission-daemon/settings.json
 RUN chown -R debian-transmission:debian-transmission /var/lib/transmission-daemon
