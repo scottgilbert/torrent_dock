@@ -1,0 +1,13 @@
+[Unit]
+Description=Transmission-daemon container
+Requires=docker.service
+After=docker.service
+
+[Service]
+Restart=always
+ExecStart=/root/torrent_dock/run_it.sh -it
+ExecStop=/usr/bin/docker stop torrent_dock
+
+[Install]
+WantedBy=local.target
+
