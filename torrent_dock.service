@@ -4,9 +4,13 @@ Requires=docker.service
 After=docker.service
 
 [Service]
-Restart=always
-ExecStart=/root/torrent_dock/run_it.sh -it
+#TimeoutStartSec=0
+#Type=oneshot
+ExecStartPre=-/usr/bin/docker kill torrent_dock
+ExecStartPre=-/usr/bin/docker rm torrent_dock
+ExecStart=/bin/bash /root/torrent_dock/run_it.sh 
 ExecStop=/usr/bin/docker stop torrent_dock
+ExecStop=-/usr/bin/docker rm torrent_dock
 
 [Install]
 WantedBy=local.target
