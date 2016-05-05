@@ -13,5 +13,5 @@ ExecStop=/usr/bin/docker stop torrent_dock
 ExecStop=-/usr/bin/docker rm torrent_dock
 
 [Install]
-WantedBy=local.target
+WantedBy=multi-user.target
 
